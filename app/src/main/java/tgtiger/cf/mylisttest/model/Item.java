@@ -8,14 +8,20 @@ package tgtiger.cf.mylisttest.model;
 
 public class Item {
 
-    private long id;
+
+    /**
+     * id : 1
+     * name : jack
+     */
+
+    private int id;
     private String name;
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -27,3 +33,4 @@ public class Item {
         this.name = name;
     }
 }
+
