@@ -14,7 +14,9 @@ import java.util.List;
 import tgtiger.cf.mylisttest.model.Item;
 
 /**
- * Created by Alex on 2017/10/17.
+ * Writer: Alex
+ * Date: 2017/10/17
+ * Project: MyListTest
  */
 
 public class SharedPerferenceHelper {
@@ -27,19 +29,21 @@ public class SharedPerferenceHelper {
 
     private static String KEY = "myList";
 
-    public static void save(Context context, List<Item> itemList) {
-        //数组转化为字符串
-        JSONObject jo;
-        JSONArray ja = new JSONArray();
-//        way1
-//        ja = JSON.parseArray(itemList.toString());
-
-//        way2
-        for(int i=0; i<itemList.size(); i++) {
-            jo = JSON.parseObject(itemList.get(i).toString());
-            ja.add(jo);
-        }
-        String jsonStr = ja.toJSONString();
+    private static void save(Context context, List<Item> itemList) {
+//        //数组转化为字符串
+//        JSONObject jo;
+//        JSONArray ja = new JSONArray();
+////        way1
+////        ja = JSON.parseArray(itemList.toString());
+//
+////        way2
+//        for(int i=0; i<itemList.size(); i++) {
+//            System.out.println();
+//            jo = JSON.parseObject(itemList.get(i).toString());
+//            ja.add(jo);
+//        }
+//        String jsonStr = ja.toJSONString();
+        String jsonStr = JSON.toJSONString(itemList);
         //保存字符串到SharedPerference中
         SharedPreferences sp = context.getSharedPreferences(FILE_NAME, Activity.MODE_PRIVATE);
         SharedPreferences.Editor edit = sp.edit();
@@ -57,14 +61,15 @@ public class SharedPerferenceHelper {
         String jsonStr = sp.getString(KEY, "[]");
 
         //将字符串转化为数组
-        JSONArray ja = JSON.parseArray(jsonStr);
+//        JSONArray ja = JSON.parseArray(jsonStr);
         List<Item> itemList = new ArrayList<>();
 
-        for(int i=0; i<ja.size(); i++) {
-            JSONObject jo = ja.getJSONObject(i);
-            Item item = JSON.parseObject(jo.toJSONString(), Item.class);
-            itemList.add(item);
-        }
+//        for(int i=0; i<ja.size(); i++) {
+//            JSONObject jo = ja.getJSONObject(i);
+//            Item item = JSON.parseObject(jo.toJSONString(), Item.class);
+//            itemList.add(item);
+//        }
+        itemList = JSON.parseArray(jsonStr, Item.class);
         return itemList;
     }
 

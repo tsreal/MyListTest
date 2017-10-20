@@ -29,4 +29,5 @@ dependencies {
     compile 'com.android.support:design:25.3.1'
     testCompile 'junit:junit:4.12'
     compile files('libs/fastjson-1.2.37.jar')
+    compile 'com.githang:status-bar-compat:0.5'
 }

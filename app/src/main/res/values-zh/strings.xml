@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="title_app_name">我的清单</string>
     <string name="action_settings">设置</string>
     <string name="title_activity_add_item">添加</string>
     <string name="title_activity_edit_item">编辑待办事项</string>
@@ -9,4 +9,5 @@
     <string name="edit_tip">修改待办事项</string>
     <string name="edit_editText_hint">待办事项名称</string>
     <string name="edit_btn_submit">提交</string>
+    <string name="title_app_name">我的清单</string>
 </resources>

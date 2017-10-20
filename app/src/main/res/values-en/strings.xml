@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_app_name">MyLists</string>
+    <string name="action_settings">settings</string>
+    <string name="title_activity_add_item">Add</string>
+    <string name="title_activity_edit_item">edit_items</string>
+    <string name="add_item_tip">Please enter todo item</string>
+    <string name="add_item_submit">Submit</string>
+    <string name="add_editText_hint">name of todo items</string>
+    <string name="edit_btn_submit">submit</string>
+    <string name="edit_editText_hint">name of todo item</string>
+    <string name="edit_tip">edit todo item</string>
+</resources>

@@ -15,22 +15,25 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@android:color/holo_green_dark"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+    <include layout="@layout/content_main"
+        android:id="@+id/include2" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_width="58dp"
+        android:layout_height="63dp"
+        android:layout_gravity="top|center_horizontal"
         android:layout_margin="@dimen/fab_margin"
-        android:tint="@android:color/background_light"
-        app:backgroundTint="@color/colorAccent"
-        app:rippleColor="@color/colorAccent"
-        app:srcCompat="@android:drawable/ic_menu_edit" />
+        android:tint="?android:attr/textColorPrimaryInverse"
+        app:backgroundTint="?android:attr/colorPressedHighlight"
+        app:layout_anchor="@+id/include2"
+        app:layout_anchorGravity="bottom|center_horizontal"
+        app:rippleColor="@android:color/background_light"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
 </android.support.design.widget.CoordinatorLayout>
